@@ -19,7 +19,7 @@ def helper(S, N):
         return False
 
 def PEM(P, g, N):
-    a = [[0] * 14 for i in range(g)]  "14 is just an abitrary number that insured no index out of bounds error"
+    a = [[0] * 14 for i in range(g)]  "14 is just an abitrary number that ensured no index out of bounds error"
     index2 = 0
     currentN = N
     index1 = 0
