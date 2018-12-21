@@ -4,7 +4,6 @@
 """
 
 import numpy as np
-import xxhash
 import math
 
 class GRR:
@@ -15,11 +14,10 @@ class GRR:
         self.d = domain
         self.epsilon = epsilon
         self.p = math.exp(self.epsilon) / (math.exp(self.epsilon) + self.d - 1)
-        print(self.p)
         self.q = 1 / (math.exp(self.epsilon) + self.d - 1)
 
         self.numUsers = len(data)
-        self.estimate = np.zeros(self.d + 1)
+        self.estimate = np.zeros(self.d)
         self.perturbed = np.zeros(self.numUsers)
 
         self.pi()
